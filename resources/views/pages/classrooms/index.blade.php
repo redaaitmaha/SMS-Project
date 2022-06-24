@@ -27,92 +27,90 @@
                 </div>
             </div>
 
-            <div class="row targetDiv" id="div0">
-                <div class="col-md-12">
-                    <div id="group1" class="fvrduplicate">
-                        <div class="row entry">
-                            <div class="col-xs-12 col-md-5">
-                                <div class="form-group">
-                                    <label>Length(mm)</label>
-                                    <input class="form-control form-control-sm" name="fields[]" type="text"
-                                        placeholder="Length">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-5">
-                                <div class="form-group">
-                                    <label>Qty(pcs)</label>
-                                    <input class="form-control form-control-sm" name="fields[]" type="text" placeholder="Qty">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-2">
-                                <div class="form-group">
-                                    <label>&nbsp;</label>
-                                    <button type="button" class="btn btn-success btn-sm btn-add">
-                                        <i class="fa fa-plus" aria-hidden="true">+</i>
-                                    </button>
-                                </div>
-                            </div>
+            <!-- ROW OPEN -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Grades Table</h3>
+                    </div>
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+
+
+
+
+                    <div class="card-body">
+
+                        <a class="btn btn-success" href="{{ route('classroom.create')}}"> Create New Product</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered border text-nowrap mb-0" id="basic-edit">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>class name</th>
+                                        <th>grade name</th>
+                                        <th name="bstable-actions">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @foreach ($grades as $grade) --}}
+                                        <tr>
+                                            <td>{{-- {{ ++$i }} --}}</td>
+                                            <td>{{-- {{ $grade->name }} --}}</td>
+                                            <td>{{-- {{ $grade->notes }} --}}</td>
+                                            <td name="bstable-actions">
+                                                <div class="btn-list">
+
+
+                                                    <form action="{{-- {{ route('grades.destroy', $grade->id) }} --}}"
+                                                        method="POST">
+
+                                                        <a class="btn btn-primary"
+                                                            href="{{-- {{ route('grades.edit', $grade->id) }} --}}"><span
+                                                                class="fe fe-edit"> </span></a>
+
+
+                                                        {{-- @csrf
+                                                        @method('DELETE') --}}
+
+                                                        <button id="bDel" type="submit" class="btn  btn-danger">
+                                                            <span class="fe fe-trash-2"> </span>
+                                                        </button>
+
+                                                    </form>
+
+
+
+
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                </tbody>
+                               {{--  @endforeach --}}
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr> <!-- second form starts below: -->
-            <div class="row targetDiv" id="div1">
-                <div class="col-md-12">
-                    <div id="group2" class="fvrduplicate">
-                        <div class="row entry">
-                            <!-- Field Start -->
-                            <div class="col-xs-12 col-md-5">
-                                <div class="form-group">
-                                    <label>Length(mm)</label>
-                                    <input class="form-control form-control-sm" name="fields[]" type="text"
-                                        placeholder="Length">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-5">
-                                <div class="form-group">
-                                    <label>Qty(pcs)</label>
-                                    <input class="form-control form-control-sm" name="fields[]" type="text" placeholder="Qty">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-2">
-                                <div class="form-group">
-                                    <label>&nbsp;</label>
-                                    <button type="button" class="btn btn-success btn-sm btn-add">
-                                        <i class="fa fa-plus" aria-hidden="true">+</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--end::Repeater-->
-        
-          
-            
+
 
         </div>
 
-    </div>
-    <script>
-        $(function () {
-            $(document).on('click', '.btn-add', function (e) {
-                e.preventDefault();
-                var controlForm = $(this).closest('.fvrduplicate'),
-                    currentEntry = $(this).parents('.entry:first'),
-                    newEntry = $(currentEntry.clone()).appendTo(controlForm);
-                newEntry.find('input').val('');
-                controlForm.find('.entry:not(:last) .btn-add')
-                    .removeClass('btn-add').addClass('btn-remove')
-                    .removeClass('btn-success').addClass('btn-danger')
-                    .html('<i class="fa fa-minus" aria-hidden="true">-</i>');
-            }).on('click', '.btn-remove', function (e) {
-                $(this).closest('.entry').remove();
-                return false;
-            });
-        });
 
-    </script>
+    </div>
     
 @endsection

@@ -6,6 +6,7 @@ use App\Models\Classroom;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use App\Models\Grade;
 
 class ClassroomController extends Controller
 {
@@ -17,7 +18,13 @@ class ClassroomController extends Controller
     public function index()
     {
         //
-        return view('pages.classrooms.index');
+        $classes = Classroom::all();
+        $grades = Grade::all();
+        return view('pages.classrooms.index', compact('classes', 'grades'));
+
+        
+
+
     }
 
     /**
@@ -28,6 +35,8 @@ class ClassroomController extends Controller
     public function create()
     {
         //
+        
+        return view('pages.classrooms.create');
     }
 
     /**
@@ -36,9 +45,21 @@ class ClassroomController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Grade $grades)
     {
         //
+       
+        $request->validate([
+            'name' => 'required',
+            'notes' => 'required',
+        ]);
+        $grades = Grade::all();
+        Classroom::create($request->all());
+        
+   
+        return redirect()->route('classroom.index')
+                        ->with('success','Product created successfully.');
+       
     }
 
     /**
