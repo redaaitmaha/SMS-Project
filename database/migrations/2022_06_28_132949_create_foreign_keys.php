@@ -18,6 +18,11 @@ class CreateForeignKeys extends Migration
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});
+
+		Schema::table('my_parents', function(Blueprint $table) {
+            $table->foreign('Nationality_Father_id')->references('id')->on('nationalities');
+            $table->foreign('Nationality_Mother_id')->references('id')->on('nationalities');
+        });
 	}
 
 	public function down()

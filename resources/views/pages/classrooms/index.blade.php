@@ -50,7 +50,7 @@
 
                     <div class="card-body">
 
-                        <a class="btn btn-success" href="{{ route('classroom.create')}}"> Create New Product</a>
+                        <a class="btn btn-success" href="{{ route('classroom.create') }}"> Create New Product</a>
                     </div>
 
                     <div class="card-body">
@@ -65,25 +65,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($grades as $grade) --}}
+                                    
+                                    @foreach ($classes as $class)
                                         <tr>
-                                            <td>{{-- {{ ++$i }} --}}</td>
-                                            <td>{{-- {{ $grade->name }} --}}</td>
-                                            <td>{{-- {{ $grade->notes }} --}}</td>
+                                            <td>{{ ++$i }}</td>
+                                            <td> {{ $class->Name_Class }} </td>
+                                            <td> {{ $class->grades->name }} </td>
                                             <td name="bstable-actions">
                                                 <div class="btn-list">
 
 
-                                                    <form action="{{-- {{ route('grades.destroy', $grade->id) }} --}}"
-                                                        method="POST">
+                                                    <form action="{{ route('classroom.destroy', $class->id) }}" method="POST">
 
-                                                        <a class="btn btn-primary"
-                                                            href="{{-- {{ route('grades.edit', $grade->id) }} --}}"><span
+                                                        <a class="btn btn-primary" href="{{ route('classroom.edit', $class->id) }} "><span
                                                                 class="fe fe-edit"> </span></a>
 
 
-                                                        {{-- @csrf
-                                                        @method('DELETE') --}}
+                                                        @csrf
+                                                        @method('DELETE') 
 
                                                         <button id="bDel" type="submit" class="btn  btn-danger">
                                                             <span class="fe fe-trash-2"> </span>
@@ -100,7 +99,7 @@
                                         </tr>
 
                                 </tbody>
-                               {{--  @endforeach --}}
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -112,5 +111,5 @@
 
 
     </div>
-    
+
 @endsection

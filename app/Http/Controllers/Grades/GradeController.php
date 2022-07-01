@@ -45,14 +45,16 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+
             'name' => 'required',
             'notes' => 'required',
+
         ]);
   
         Grade::create($request->all());
-   
-        return redirect()->route('grades.index')
-                        ->with('success','Product created successfully.');
+
+        return redirect()->route('grades.index')->with('success','Product created successfully.');
+                        
 
         
         /* $request->validate([

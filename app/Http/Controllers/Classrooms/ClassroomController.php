@@ -18,11 +18,12 @@ class ClassroomController extends Controller
     public function index()
     {
         //
-        $classes = Classroom::all();
+        $classes = Classroom::latest()->paginate(10);
         $grades = Grade::all();
-        return view('pages.classrooms.index', compact('classes', 'grades'));
 
-        
+
+        return view('pages.classrooms.index', compact('classes','grades'))
+            ->with('i', (request()->input('page', 1) - 1) * 10);
 
 
     }
@@ -35,8 +36,10 @@ class ClassroomController extends Controller
     public function create()
     {
         //
+        $classes = Classroom::all();
+        $grades = Grade::all();
         
-        return view('pages.classrooms.create');
+        return view('pages.classrooms.create', compact('classes','grades'));
     }
 
     /**
@@ -45,21 +48,21 @@ class ClassroomController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Grade $grades)
+    public function store(Request $request)
     {
-        //
-       
+        // 
         $request->validate([
             'name' => 'required',
-            'notes' => 'required',
+            'gname' => 'required',
         ]);
-        $grades = Grade::all();
+
+        
+        
         Classroom::create($request->all());
         
-   
-        return redirect()->route('classroom.index')
-                        ->with('success','Product created successfully.');
-       
+
+        return redirect()->route('classroom.index')->with('success','Product created successfully.');
+
     }
 
     /**

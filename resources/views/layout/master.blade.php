@@ -30,11 +30,16 @@
     <!--- FONT-ICONS CSS -->
     <link href="{{ URL::asset('assets/css/icons.css') }}" rel="stylesheet" />
 
+    <link href="{{ URL::asset('assets/css/wizard.css') }}" rel="stylesheet" />
+
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ URL::asset('assets/colors/color1.css') }}" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    @livewireStyles
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body class="app sidebar-mini ltr light-mode">
@@ -359,7 +364,7 @@
                                 class="header-brand-img desktop-logo" alt="logo">
                             <img src="{{ URL::asset('assets/images/brand/logo-1.png') }}"
                                 class="header-brand-img toggle-logo" alt="logo">
-                            <img src="{{ URL::asset('assets/images/brand/logo-2.png') }}"
+                            <img src="{{-- {{ URL::asset('assets/images/brand/logo-2.png') } --}}}"
                                 class="header-brand-img light-logo" alt="logo">
                             <img src="{{ URL::asset('assets/images/brand/logo-3.png') }}"
                                 class="header-brand-img light-logo1" alt="logo">
@@ -381,9 +386,52 @@
                                         class="side-menu__label">Dashboard</span></a>
                             </li>
                             <li class="sub-category">
-                                <h3>UI Kit</h3>
+                                <h3>members</h3>
 
 
+
+
+                            
+
+
+
+
+
+
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                                        class="side-menu__icon icon icon-user"></i><span
+                                        class="side-menu__label">Students</span></a>
+                            </li>
+
+
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
+                                        class="side-menu__icon icon icon-people"></i><span
+                                        class="side-menu__label">Parents</span></a>
+                                <ul class="slide-menu">
+                                    <li class="side-menu-label1"><a href="javascript:void(0)">Grades</a></li>
+                                    <li><a href="#" class="slide-item">Parents</a></li>
+                                </ul>
+                                <ul class="slide-menu">
+                                    <li class="side-menu-label1"><a href="javascript:void(0)">Add Parent</a></li>
+                                    <li><a href=" {{ url('add-parent') }} " class="slide-item">
+                                            Add Parent</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ Route('teachers.index')}}"><i
+                                        class="side-menu__icon  icon icon-graduation"></i><span
+                                        class="side-menu__label">Teachers</span></a>
+                            </li>
+
+
+
+                        </li>
+                        <li class="sub-category">
+                            <h3>members</h3>
 
 
                             <li class="slide">
@@ -399,24 +447,6 @@
                                     <li><a href=" {{ route('classroom.index') }} " class="slide-item"> Class
                                             rooms</a></li>
                                 </ul>
-                            </li>
-
-
-
-
-
-
-                            <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
-                                        class="side-menu__icon icon icon-people"></i><span
-                                        class="side-menu__label">Students</span></a>
-                            </li>
-
-
-                            <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
-                                        class="side-menu__icon  icon icon-graduation"></i><span
-                                        class="side-menu__label">Teachers</span></a>
                             </li>
 
 
@@ -589,6 +619,10 @@
             </div>
             <!-- Country-selector modal-->
 
+
+
+            @yield('content')
+
             <!-- FOOTER -->
             <footer class="footer">
                 <div class="container">
@@ -604,9 +638,12 @@
             </footer>
             <!-- FOOTER END -->
 
+
+
+
         </div>
 
-        @yield('content')
+
 
         <!-- BACK-TO-TOP -->
         <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -614,33 +651,32 @@
 
 
         @yield('ajaxScirpt')
+        <script>
+            window.addEventListener('swal:modal', event => {
+                swal({
+                    title: event.detail.message,
+                    text: event.detail.text,
+                    icon: event.detail.type,
+                });
+            });
 
-        <script src="app-assets/vendors/js/vendors.min.js"></script>
-        <script src="app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
-        <script src="app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
-        <script src="app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
-        <!-- BEGIN Vendor JS-->
+            window.addEventListener('swal:confirm', event => {
+                swal({
+                        title: event.detail.message,
+                        text: event.detail.text,
+                        icon: event.detail.type,
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.livewire.emit('delete',event.detail.id);
+                        }
+                    });
+            });
+        </script>
 
-        <!-- BEGIN: Page Vendor JS-->
-        <script src="app-assets/vendors/js/ui/jquery.sticky.js"></script>
-        <script src="app-assets/vendors/js/forms/repeater/jquery.repeater.min.js"></script>
-        <!-- END: Page Vendor JS-->
-
-        <!-- BEGIN: Theme JS-->
-        <script src="app-assets/js/scripts/configs/horizontal-menu.js"></script>
-        <script src="app-assets/js/core/app-menu.js"></script>
-        <script src="app-assets/js/core/app.js"></script>
-        <script src="app-assets/js/scripts/components.js"></script>
-        <script src="app-assets/js/scripts/footer.js"></script>
-        <!-- END: Theme JS-->
-
-        <!-- BEGIN: Page JS-->
-        <script src="app-assets/js/scripts/forms/form-repeater.js"></script>
-        <!-- END: Page JS-->
-
-
-
-        <!-- JQUERY JS -->
+        
         <script src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
         <!-- BOOTSTRAS -->
         <script src="{{ URL::asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script>
@@ -658,9 +694,9 @@
         <!-- SIDEBAR -->
         <script src="{{ URL::asset('assets/plugins/sidebar/sidebar.js') }}"></script>
         <!-- Perfect OLLBAR JS-->
-        <script src="{{ URL::asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
-        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
-        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script>
+        {{-- <script src="{{ URL::asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script> --}}
+        {{-- <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
+        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script> --}}
         <!-- INTERNALARTJS CHART JS-->
         <script src="{{ URL::asset('assets/plugins/chart/Chart.bundle.js') }}"></script>
         <script src="{{ URL::asset('assets/plugins/chart/rounded-barchart.js') }}"></script>
@@ -695,6 +731,8 @@
 
         <!-- CUSTOM JS -->
         <script src="{{ URL::asset('assets/js/custom.js') }}"></script>
+
+        @livewireScripts
 
 </body>
 

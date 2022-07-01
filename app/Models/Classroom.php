@@ -7,12 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Classroom extends Model
 {
-    protected $table = 'classrooms';
-    public $timestamps = true;
-    protected $fillable=['Name_Class','Grade_id'];
+    
+    
 
-    public function grades()
+
+    protected $table = 'Classrooms';
+    public $timestamps = true;
+    protected $fillable=['Name_Class','grade_id'];
+    
+    protected $guarded=[];
+
+
+
+    public function Grades()
     {
-        return $this->belongsTo('grade', 'Grade_id');
+        return $this->belongsTo('App\Models\Grade', 'grade_id');
     }
 }
