@@ -72,8 +72,8 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="mt-2">
-                                                <h6 class="">Total Profit</h6>
-                                                <h2 class="mb-0 number-font">67,987</h2>
+                                                <h6 class="">Total Teachers</h6>
+                                                <h2 class="mb-0 number-font">{{ $teachers }}</h2>
                                             </div>
                                             <div class="ms-auto">
                                                 <div class="chart-wrapper mt-1">
@@ -92,10 +92,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <canvas id="leadschart"
+                                                    {{-- <canvas id="leadschart"
                                                         class="h-8 w-9 chart-dropshadow chartjs-render-monitor"
                                                         width="120" height="80"
-                                                        style="display: block; height: 64px; width: 96px;"></canvas>
+                                                        style="display: block; height: 64px; width: 96px;"></canvas> --}}
+                                                    <i class="icon icon-graduation" width="120"
+                                                        style="font-size:60px;color:#0dcaf0"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,8 +112,8 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="mt-2">
-                                                <h6 class="">Total Expenses</h6>
-                                                <h2 class="mb-0 number-font">$76,965</h2>
+                                                <h6 class="">Total Parents</h6>
+                                                <h2 class="mb-0 number-font"> {{ $parents }} </h2>
                                             </div>
                                             <div class="ms-auto">
                                                 <div class="chart-wrapper mt-1">
@@ -130,10 +132,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <canvas id="profitchart"
-                                                        class="h-8 w-9 chart-dropshadow chartjs-render-monitor"
-                                                        width="120" height="80"
-                                                        style="display: block; height: 64px; width: 96px;"></canvas>
+                                                    <i class="icon icon-people" width="120"
+                                                        style="font-size:60px;color:#6c5ffc"></i>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -283,11 +284,11 @@
                 </div>
                 <!-- ROW-2 END -->
 
-                
+
                 <!-- ROW-3 END -->
 
                 <!-- ROW-4 -->
-                
+
                 <!-- ROW-4 END -->
             </div>
         </div>

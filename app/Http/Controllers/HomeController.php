@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Models\MyParent;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard');    
+        $teachers = Teacher::count();
+        $parents = MyParent::count();
+        return view('admin/dashboard', compact('teachers','parents'));    
     }
 }

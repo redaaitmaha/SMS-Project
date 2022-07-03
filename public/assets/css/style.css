@@ -60413,6 +60413,7 @@ ul {
 
 .side-header .header-brand-img.light-logo1 {
     display: block !important;
+    width: 100px;
 }
 
 .sidebar-mini.sidenav-toggled .app-sidebar .side-header .header-brand-img.light-logo1 {

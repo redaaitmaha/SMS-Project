@@ -13,22 +13,22 @@
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/brand/favicon.ico')}}" />
 
     <!-- TITLE -->
     <title>Sash – Bootstrap 5 Admin & Dashboard Template</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="style" href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{asset('assets/colors/color1.css')}}" />
 
 </head>
 
@@ -38,7 +38,7 @@
 
             <!-- GLOBAL-LOADER -->
             <div id="global-loader">
-                <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
+                <img src="{{asset('assets/images/loader.svg')}}" class="loader-img" alt="Loader">
             </div>
             <!-- /GLOBAL-LOADER -->
 
@@ -54,9 +54,9 @@
                                     href="javascript:void(0)"></a>
                                 <!-- sidebar-toggle-->
                                 <a class="logo-horizontal " href="index.html">
-                                    <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
+                                    <img src="{{asset('assets/images/brand/logo-new.png')}}" class="header-brand-img desktop-logo"
                                         alt="logo">
-                                    <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
+                                    <img src="{{asset('assets/images/brand/logo-new.png')}}" class="header-brand-img light-logo1"
                                         alt="logo">
                                 </a>
                                 <!-- LOGO -->
@@ -96,7 +96,7 @@
                                     <div class="row">
                                         <div class="main-sidemenu navbar px-0">
                                             <a class="navbar-brand ps-0 d-none d-lg-block" href="index.html">
-                                                <img alt="" class="logo-2" src="../assets/images/brand/logo-3.png">
+                                                <img alt="" class="logo-2" src="{{asset('assets/images/brand/logo-new.png')}}">
                                             </a>
                                             <div class="slide-left disabled" id="slide-left"><svg
                                                     xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
@@ -191,7 +191,7 @@
                                             </a>
                                         </div>
                                         <div class="col-xl-6 col-lg-6 my-auto">
-                                            <img src="../assets/images/landing/market4.png" alt="">
+                                            <img src="{{asset('assets/images/landing/market4.png')}}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -689,7 +689,7 @@
                                                                     <div class="row">
                                                                         <div class="col-xl-6 col-lg-6 ps-0">
                                                                             <div class="text-center reveal revealleft mb-3">
-                                                                                <img src="../assets/images/landing/business-team-working-on-business-plan.png"
+                                                                                <img src="{{asset('assets/images/landing/business-team-working-on-business-plan.png')}}"
                                                                                     alt="" class="br-5">
                                                                             </div>
                                                                         </div>
@@ -758,35 +758,35 @@
                                                                     <div class="col-lg-12 px-0">
                                                                         <div class="feature-logos mt-5">
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/1.png">
+                                                                                <img src="{{asset('assets/images/landing/web/1.png')}}">
                                                                                 <h5 class="mt-3 text-white">Bootstrap5</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/2.png">
+                                                                                <img src="{{asset('assets/images/landing/web/2.png')}}">
                                                                                 <h5 class="mt-3 text-white">HTML5</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/3.png">
+                                                                                <img src="{{asset('assets/images/landing/web/3.png')}}">
                                                                                 <h5 class="mt-3 text-white">JQuery</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/4.png">
+                                                                                <img src="{{asset('assets/images/landing/web/4.png')}}">
                                                                                 <h5 class="mt-3 text-white">Sass</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/5.png">
+                                                                                <img src="{{asset('assets/images/landing/web/5.png')}}">
                                                                                 <h5 class="mt-3 text-white">Gulp</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/6.png">
+                                                                                <img src="{{asset('assets/images/landing/web/6.png')}}">
                                                                                 <h5 class="mt-3 text-white">NPM</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/1.png">
+                                                                                <img src="{{asset('assets/images/landing/web/1.png')}}">
                                                                                 <h5 class="mt-3 text-white">Bootstrap5</h5>
                                                                             </div>
                                                                             <div class="slide">
-                                                                                <img src="../assets/images/landing/web/2.png">
+                                                                                <img src="{{asset('assets/images/landing/web/2.png')}}">
                                                                                 <h5 class="mt-3 text-white">HTML5</h5>
                                                                             </div>
                                                                         </div>
@@ -1529,7 +1529,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12 col-lg-6 reveal revealright">
-                                                                <img src="../assets/images/landing/frequently-asked-questions.png"
+                                                                <img src="{{asset('assets/images/landing/frequently-asked-questions.png')}}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -1552,8 +1552,8 @@
                                                                 <div class="d-flex overflow-visible">
                                                                     <a href="blog-details.html"
                                                                         class="card-aside-column br-5 cover-image"
-                                                                        data-bs-image-src="../assets/images/media/12.jpg"
-                                                                        style="background: url(&quot;../assets/images/media/12.jpg&quot;) center center;"></a>
+                                                                        data-bs-image-src="{{asset('assets/images/media/12.jpg')}}"
+                                                                        style="background: url(&quot;{{asset('assets/images/media/12.jpg')}}&quot;) center center;"></a>
                                                                     <div class="ps-3 flex-column">
                                                                         <span
                                                                             class="badge bg-primary me-1 mb-1 mt-1">Business</span>
@@ -1574,8 +1574,8 @@
                                                                 <div class="d-flex overflow-visible">
                                                                     <a href="blog-details.html"
                                                                         class="card-aside-column br-5 cover-image"
-                                                                        data-bs-image-src="../assets/images/media/22.jpg"
-                                                                        style="background: url(&quot;../assets/images/media/22.jpg&quot;) center center;"></a>
+                                                                        data-bs-image-src="{{asset('assets/images/media/22.jpg')}}"
+                                                                        style="background: url(&quot;{{asset('assets/images/media/22.jpg')}}&quot;) center center;"></a>
                                                                     <div class="ps-3 flex-column">
                                                                         <span
                                                                             class="badge bg-danger me-1 mb-1 mt-1">Lifestyle</span>
@@ -1597,8 +1597,8 @@
                                                                 <div class="d-flex overflow-visible">
                                                                     <a href="blog-details.html"
                                                                         class="card-aside-column br-5 cover-image"
-                                                                        data-bs-image-src="../assets/images/media/about.jpg"
-                                                                        style="background: url(&quot;../assets/images/media/about.jpg&quot;) center center;"></a>
+                                                                        data-bs-image-src="{{asset('assets/images/media/about.jpg')}}"
+                                                                        style="background: url(&quot;{{asset('assets/images/media/about.jpg')}}&quot;) center center;"></a>
                                                                     <div class="ps-3 flex-column">
                                                                         <span
                                                                             class="badge bg-secondary me-1 mb-1 mt-1">Travel</span>
@@ -1620,8 +1620,8 @@
                                                                 <div class="d-flex overflow-visible">
                                                                     <a href="blog-details.html"
                                                                         class="card-aside-column br-5 cover-image"
-                                                                        data-bs-image-src="../assets/images/media/25.jpg"
-                                                                        style="background: url(&quot;../assets/images/media/25.jpg&quot;) center center;"></a>
+                                                                        data-bs-image-src="{{asset('assets/images/media/25.jpg')}}"
+                                                                        style="background: url(&quot;{{asset('assets/images/media/25.jpg')}}&quot;) center center;"></a>
                                                                     <div class="ps-3 flex-column">
                                                                         <span
                                                                             class="badge bg-success me-1 mb-1 mt-1">Meeting</span>
@@ -2053,7 +2053,7 @@
                                                 <div class="col-lg-4 col-sm-12 col-md-4 reveal revealleft">
                                                     <div class="">
                                                         <a href="index.html"><img loading="lazy" alt="" class="logo mb-3"
-                                                                src="../assets/images/brand/logo-3.png"></a>
+                                                                src="{{asset('assets/images/brand/logo-3.png')}}"></a>
                                                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                                                             dolore eu fugiat nulla pariatur Excepteur sint occaecat.</p>
                                                         <div class="form-group">
@@ -2102,37 +2102,37 @@
                 <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
                 <!-- JQUERY JS -->
-                <script src="../assets/js/jquery.min.js"></script>
+                <script src="{{asset('assets/js/jquery.min.js')}}"></script>
 
                 <!-- BOOTSTRAP JS -->
-                <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-                <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+                <script src="{{asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+                <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 
                 <!-- COUNTERS JS-->
-                <script src="../assets/plugins/counters/counterup.min.js"></script>
-                <script src="../assets/plugins/counters/waypoints.min.js"></script>
-                <script src="../assets/plugins/counters/counters-1.js"></script>
+                <script src="{{asset('assets/plugins/counters/counterup.min.js')}}"></script>
+                <script src="{{asset('assets/plugins/counters/waypoints.min.js')}}"></script>
+                <script src="{{asset('assets/plugins/counters/counters-1.js')}}"></script>
 
                 <!-- Perfect SCROLLBAR JS-->
-                <script src="../assets/plugins/owl-carousel/owl.carousel.js"></script>
-                <script src="../assets/plugins/company-slider/slider.js"></script>
+                <script src="{{asset('assets/plugins/owl-carousel/owl.carousel.js')}}"></script>
+                <script src="{{asset('assets/plugins/company-slider/slider.js')}}"></script>
 
                 <!-- SIDE-MENU JS -->
-                <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
+                <script src="{{asset('assets/plugins/sidemenu/sidemenu.js')}}"></script>
 
                 <!-- Star Rating Js-->
-                <script src="../assets/plugins/rating/jquery-rate-picker.js"></script>
-                <script src="../assets/plugins/rating/rating-picker.js"></script>
+                <script src="{{asset('assets/plugins/rating/jquery-rate-picker.js')}}"></script>
+                <script src="{{asset('assets/plugins/rating/rating-picker.js')}}"></script>
 
                 <!-- Star Rating-1 Js-->
-                <script src="../assets/plugins/ratings-2/jquery.star-rating.js"></script>
-                <script src="../assets/plugins/ratings-2/star-rating.js"></script>
+                <script src="{{asset('assets/plugins/ratings-2/jquery.star-rating.js')}}"></script>
+                <script src="{{asset('assets/plugins/ratings-2/star-rating.js')}}"></script>
 
                 <!-- Sticky js -->
-                <script src="../assets/js/sticky.js"></script>
+                <script src="{{asset('assets/js/sticky.js')}}"></script>
 
                 <!-- CUSTOM JS -->
-                <script src="../assets/js/landing.js"></script>
+                <script src="{{asset('assets/js/landing.js')}}"></script>
 
             </body>
 

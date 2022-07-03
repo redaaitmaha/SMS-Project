@@ -3,20 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repository\TeacherRepositoryInterface;
 
-class TeacherController extends Controller
+class SectionController extends Controller
 {
-
-    protected $Teachers;
-
-    public function __construct(TeacherRepositoryInterface $Teachers){
-        $this->Teacher  = $Teachers;
-
-    }
-    
-
-
     /**
      * Display a listing of the resource.
      *
@@ -25,8 +14,6 @@ class TeacherController extends Controller
     public function index()
     {
         //
-        $Teachers = $this->Teacher->getAllTeachers();
-        return view('pages.teachers.teachers', compact('Teachers'));
     }
 
     /**
@@ -37,9 +24,6 @@ class TeacherController extends Controller
     public function create()
     {
         //
-        $specializations = $this->Teacher->Getspecialization();
-        $genders = $this->Teacher->GetGender();
-        return view('pages.teachers.create',compact('specializations','genders'));
     }
 
     /**
@@ -51,7 +35,6 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         //
-        return $this->Teacher->StoreTeachers($request);
     }
 
     /**
@@ -74,10 +57,6 @@ class TeacherController extends Controller
     public function edit($id)
     {
         //
-        $Teachers = $this->Teacher->editTeachers($id);
-        $specializations = $this->Teacher->Getspecialization();
-        $genders = $this->Teacher->GetGender();
-        return view('pages.teachers.edit',compact('Teachers','specializations','genders'));
     }
 
     /**
@@ -90,7 +69,6 @@ class TeacherController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return $this->Teacher->UpdateTeachers($request);
     }
 
     /**
@@ -99,9 +77,8 @@ class TeacherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
         //
-        return $this->Teacher->DeleteTeachers($request);
     }
 }

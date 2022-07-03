@@ -65,9 +65,9 @@
                             href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal " href="index.html">
-                            <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
+                            <img src="{{asset('assets/images/brand/logo.png')}}" class="header-brand-img desktop-logo"
                                 alt="logo">
-                            <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
+                            <img src="{{asset('assets/images/brand/logo-3.png')}}" class="header-brand-img light-logo1"
                                 alt="logo">
                         </a>
                         <!-- LOGO -->
@@ -220,7 +220,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="../assets/images/users/1.jpg"></span>
+                                                            data-bs-image-src="{{asset('assets/images/users/1.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Peter Theil</h5>
@@ -234,7 +234,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="../assets/images/users/15.jpg"></span>
+                                                            data-bs-image-src="{{asset('assets/images/users/15.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Abagael Luth</h5>
@@ -248,7 +248,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="../assets/images/users/12.jpg"></span>
+                                                            data-bs-image-src="{{asset('assets/images/users/12.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Brizid Dawson</h5>
@@ -262,7 +262,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="../assets/images/users/4.jpg"></span>
+                                                            data-bs-image-src="{{asset('assets/images/users/4.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Shannon Shaw</h5>
@@ -276,7 +276,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="../assets/images/users/3.jpg"></span>
+                                                            data-bs-image-src="{{asset('assets/images/users/3.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Cherry Blossom</h5>
@@ -301,7 +301,7 @@
                                         <div class="dropdown d-flex profile-1">
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown"
                                                 class="nav-link leading-none d-flex">
-                                                <img src="../assets/images/users/21.jpg" alt="profile-user"
+                                                <img src="{{asset('assets/images/users/21.jpg')}}" alt="profile-user"
                                                     class="avatar  profile-user brround cover-image">
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -362,11 +362,14 @@
                         <a class="header-brand1" href="index.html">
                             <img src="{{ URL::asset('assets/images/brand/logo.png') }}"
                                 class="header-brand-img desktop-logo" alt="logo">
+
                             <img src="{{ URL::asset('assets/images/brand/logo-1.png') }}"
                                 class="header-brand-img toggle-logo" alt="logo">
-                            <img src="{{-- {{ URL::asset('assets/images/brand/logo-2.png') } --}}}"
+
+                            <img src="{{ URL::asset('assets/images/brand/logo--2.png') }}"
                                 class="header-brand-img light-logo" alt="logo">
-                            <img src="{{ URL::asset('assets/images/brand/logo-3.png') }}"
+                                
+                            <img src="{{ URL::asset('assets/images/brand/logo-new.png') }}"
                                 class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
@@ -545,70 +548,70 @@
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block active">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/us_flag.jpg"
+                                                src="{{asset('assets/images/flags/us_flag.jpg')}}"
                                                 class="me-3 language"></span>USA
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/italy_flag.jpg"
+                                                src="{{asset('assets/images/flags/italy_flag.jpg')}}"
                                                 class="me-3 language"></span>Italy
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/spain_flag.jpg"
+                                                src="{{asset('assets/images/flags/spain_flag.jpg')}}"
                                                 class="me-3 language"></span>Spain
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/india_flag.jpg"
+                                                src="{{asset('assets/images/flags/india_flag.jpg')}}"
                                                 class="me-3 language"></span>India
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/french_flag.jpg"
+                                                src="{{asset('assets/images/flags/french_flag.jpg')}}"
                                                 class="me-3 language"></span>French
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/russia_flag.jpg"
+                                                src="{{asset('assets/images/flags/russia_flag.jpg')}}"
                                                 class="me-3 language"></span>Russia
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/germany_flag.jpg"
+                                                src="{{asset('assets/images/flags/germany_flag.jpg')}}"
                                                 class="me-3 language"></span>Germany
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/argentina.jpg"
+                                                src="{{asset('assets/images/flags/argentina.jpg')}}"
                                                 class="me-3 language"></span>Argentina
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/malaysia.jpg"
+                                                src="{{asset('assets/images/flags/malaysia.jpg')}}"
                                                 class="me-3 language"></span>Malaysia
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="../assets/images/flags/turkey.jpg"
+                                                src="{{asset('assets/images/flags/turkey.jpg')}}"
                                                 class="me-3 language"></span>Turkey
                                     </a>
                                 </li>

@@ -7554,6 +7554,7 @@ body.dark-mode *:hover::-webkit-scrollbar-thumb {
 
 .dark-mode .side-header .header-brand-img.desktop-logo {
     display: block !important;
+    width: 100px;
 }
 
 .dark-mode .side-header .header-brand-img.light-logo1 {
