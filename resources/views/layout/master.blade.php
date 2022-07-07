@@ -65,9 +65,9 @@
                             href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal " href="index.html">
-                            <img src="{{asset('assets/images/brand/logo.png')}}" class="header-brand-img desktop-logo"
+                            <img src="{{URL::asset('assets/images/brand/logo.png')}}" class="header-brand-img desktop-logo"
                                 alt="logo">
-                            <img src="{{asset('assets/images/brand/logo-3.png')}}" class="header-brand-img light-logo1"
+                            <img src="{{URL::asset('assets/images/brand/logo-3.png')}}" class="header-brand-img light-logo1"
                                 alt="logo">
                         </a>
                         <!-- LOGO -->
@@ -220,7 +220,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="{{asset('assets/images/users/1.jpg')}}"></span>
+                                                            data-bs-image-src="{{URL::asset('assets/images/users/1.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Peter Theil</h5>
@@ -234,7 +234,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="{{asset('assets/images/users/15.jpg')}}"></span>
+                                                            data-bs-image-src="{{URL::asset('assets/images/users/15.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Abagael Luth</h5>
@@ -248,7 +248,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="{{asset('assets/images/users/12.jpg')}}"></span>
+                                                            data-bs-image-src="{{URL::asset('assets/images/users/12.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Brizid Dawson</h5>
@@ -262,7 +262,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="{{asset('assets/images/users/4.jpg')}}"></span>
+                                                            data-bs-image-src="{{URL::asset('assets/images/users/4.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Shannon Shaw</h5>
@@ -276,7 +276,7 @@
                                                     <a class="dropdown-item d-flex" href="chat.html">
                                                         <span
                                                             class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                            data-bs-image-src="{{asset('assets/images/users/3.jpg')}}"></span>
+                                                            data-bs-image-src="{{URL::asset('assets/images/users/3.jpg')}}"></span>
                                                         <div class="wd-90p">
                                                             <div class="d-flex">
                                                                 <h5 class="mb-1">Cherry Blossom</h5>
@@ -301,7 +301,7 @@
                                         <div class="dropdown d-flex profile-1">
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown"
                                                 class="nav-link leading-none d-flex">
-                                                <img src="{{asset('assets/images/users/21.jpg')}}" alt="profile-user"
+                                                <img src="{{URL::asset('assets/images/users/21.jpg')}}" alt="profile-user"
                                                     class="avatar  profile-user brround cover-image">
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -391,18 +391,8 @@
                             <li class="sub-category">
                                 <h3>members</h3>
 
-
-
-
-                            
-
-
-
-
-
-
                             <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href=" {{Route('students.index')}} "><i
                                         class="side-menu__icon icon icon-user"></i><span
                                         class="side-menu__label">Students</span></a>
                             </li>
@@ -414,7 +404,7 @@
                                         class="side-menu__label">Parents</span></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Grades</a></li>
-                                    <li><a href="#" class="slide-item">Parents</a></li>
+                                    <li><a href="{{ url('add-parent') }}" class="slide-item">Parents</a></li>
                                 </ul>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Add Parent</a></li>
@@ -453,6 +443,20 @@
                             </li>
 
 
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('classroom.index') }}"><i
+                                        class="side-menu__icon icon icon-calendar"></i><span
+                                        class="side-menu__label">Classes</span></a>
+                            </li>
+
+
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('sections.index') }}"><i
+                                        class="side-menu__icon icon icon-calendar"></i><span
+                                        class="side-menu__label">Sections</span></a>
+                            </li>
+
+
 
                             <li class="slide">
                                 <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
@@ -476,6 +480,13 @@
                             </li>
 
 
+
+
+                            <li class="slide">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                                        class="side-menu__icon icon icon-briefcase"></i><span
+                                        class="side-menu__label">Administration</span></a>
+                            </li>
 
 
                             <li class="slide">
@@ -548,70 +559,70 @@
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block active">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/us_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/us_flag.jpg')}}"
                                                 class="me-3 language"></span>USA
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/italy_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/italy_flag.jpg')}}"
                                                 class="me-3 language"></span>Italy
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/spain_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/spain_flag.jpg')}}"
                                                 class="me-3 language"></span>Spain
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/india_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/india_flag.jpg')}}"
                                                 class="me-3 language"></span>India
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/french_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/french_flag.jpg')}}"
                                                 class="me-3 language"></span>French
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/russia_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/russia_flag.jpg')}}"
                                                 class="me-3 language"></span>Russia
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/germany_flag.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/germany_flag.jpg')}}"
                                                 class="me-3 language"></span>Germany
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/argentina.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/argentina.jpg')}}"
                                                 class="me-3 language"></span>Argentina
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/malaysia.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/malaysia.jpg')}}"
                                                 class="me-3 language"></span>Malaysia
                                     </a>
                                 </li>
                                 <li class="col-lg-6 mb-2">
                                     <a href="javascript:void(0)" class="btn btn-country btn-lg btn-block">
                                         <span class="country-selector"><img alt=""
-                                                src="{{asset('assets/images/flags/turkey.jpg')}}"
+                                                src="{{URL::asset('assets/images/flags/turkey.jpg')}}"
                                                 class="me-3 language"></span>Turkey
                                     </a>
                                 </li>
@@ -653,7 +664,7 @@
 
 
 
-        @yield('ajaxScirpt')
+        @yield('js')
         <script>
             window.addEventListener('swal:modal', event => {
                 swal({
@@ -697,9 +708,9 @@
         <!-- SIDEBAR -->
         <script src="{{ URL::asset('assets/plugins/sidebar/sidebar.js') }}"></script>
         <!-- Perfect OLLBAR JS-->
-        {{-- <script src="{{ URL::asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script> --}}
-        {{-- <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
-        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script> --}}
+        <script src="{{ URL::asset('assets/plugins/p-scroll/perfect-scrollbar.js') }}"></script> 
+        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll.js') }}"></script>
+        <script src="{{ URL::asset('assets/plugins/p-scroll/pscroll-1.js') }}"></script> 
         <!-- INTERNALARTJS CHART JS-->
         <script src="{{ URL::asset('assets/plugins/chart/Chart.bundle.js') }}"></script>
         <script src="{{ URL::asset('assets/plugins/chart/rounded-barchart.js') }}"></script>
